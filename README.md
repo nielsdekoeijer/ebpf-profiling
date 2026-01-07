@@ -4,6 +4,8 @@ Small example using eBPF and USDTs to do profiling on multiple processes.
 Our design is a ringbuffer that contains events.
 Every event has a timestamp in it.
 Our `loader.cpp` attaches to each USDT in `/proc/`, and when it hits one of the probes an event fires. 
+We pass a "sequence number" to the probe to track a "buffer" passing through a system consisting of multiple processes.
+The processes are "source", "processor" and "sink".
 We then print it, outlook looks as follows:
 
 ```bash
