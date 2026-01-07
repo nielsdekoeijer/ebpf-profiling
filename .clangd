@@ -1,0 +1,4 @@
+Diagnostics:
+  Suppress: -Wpotentially-evaluated-expression
+CompileFlags:
+  Add: [-std=c++20]
