@@ -8,3 +8,5 @@ sink
 err
 vmlinux.h
 processor
+profiler.bpf.o  
+profiler.skel.h
